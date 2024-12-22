@@ -1,0 +1,2 @@
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://alexz7000.github.io; style-src 'self' 'unsafe-inline';
