@@ -14,21 +14,15 @@
                 const hostname = window.location.hostname;
 
                 if (hostname === "localhost" || hostname === "127.0.0.1") {
-                    script.src = "./src/main.tsx"; // Caminho para localhost
+                    script.src = "./src/main.tsx";
                 } else {
                     try {
-                        // Tenta buscar o arquivo JS dinamicamente
-                        const response = await fetch("/portfolio/assets/");
-                        const text = await response.text();
-                        const match = text.match(/index-[a-zA-Z0-9]+\.js/g); // Busca index-XYZ123.js
-
-                        if (match && match.length > 0) {
-                            script.src = `/portfolio/assets/${match[0]}`;
-                        } else {
-                            throw new Error("Nenhum arquivo index-*.js encontrado.");
-                        }
+                        const response = await fetch("/portfolio/manifest.json");
+                        const manifest = await response.json();
+                        const jsFile = manifest["src/main.tsx"].file;
+                        script.src = `/portfolio/${jsFile}`;
                     } catch (error) {
-                        console.error("Erro ao localizar o arquivo JS:", error);
+                        console.error("Erro ao carregar o arquivo manifest.json:", error);
                         return;
                     }
                 }
