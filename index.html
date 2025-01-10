@@ -5,10 +5,42 @@
         <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ale's Portfolio</title>
-      <script type="module" crossorigin src="/assets/index-gp7jDqox.js"></script>
-      <link rel="stylesheet" crossorigin href="/assets/index-5v1DMBe_.css">
     </head>
     <body class="antialiased">
         <div id="root"></div>
+        <script>
+            (async function () {
+                const script = document.createElement("script");
+                const hostname = window.location.hostname;
+
+                if (hostname === "localhost" || hostname === "127.0.0.1") {
+                    script.src = "./src/main.tsx"; // Caminho para localhost
+                } else {
+                    try {
+                        // Tenta buscar o arquivo JS dinamicamente
+                        const response = await fetch("/portfolio/assets/");
+                        const text = await response.text();
+                        const match = text.match(/index-[a-zA-Z0-9]+\.js/g); // Busca index-XYZ123.js
+
+                        if (match && match.length > 0) {
+                            script.src = `/portfolio/assets/${match[0]}`;
+                        } else {
+                            throw new Error("Nenhum arquivo index-*.js encontrado.");
+                        }
+                    } catch (error) {
+                        console.error("Erro ao localizar o arquivo JS:", error);
+                        return;
+                    }
+                }
+
+                script.type = "module";
+                script.onerror = function () {
+                    console.error("Erro ao carregar o script:", script.src);
+                };
+
+                document.body.appendChild(script);
+            })();
+        </script>
+
     </body>
 </html>
