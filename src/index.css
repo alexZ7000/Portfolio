@@ -1,7 +1,8 @@
+@import '@styles/variables.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 :root {
     font-family: "Kanit", sans-serif;
@@ -20,39 +21,39 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        background-color: #1d232c;
-        color: white;
+        background-color: var(--gray-dark-theme);
+        color: var(--palegray-light-theme);
     }
 
     ::-webkit-scrollbar-track {
-        background: white;
+        background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: #d9d9d9;
+        background-color: var(--almostwhite-dark-theme);
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background-color: #c2c2c2;
+        background-color: var(--offwhite-dark-theme);
     }
 }
 
 @media (prefers-color-scheme: light) {
     :root {
-        background-color: #efefef;
-        color: black;
+        background-color: var(--palegray-light-theme);
+        color: var(--gray-dark-theme);
     }
 
     ::-webkit-scrollbar-track {
-        background: #f0f3fb;
+        background: transparent;
     }
 
     ::-webkit-scrollbar-thumb {
-        background-color: #2c3143;
+        background-color: var(--gray-light-theme);
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background-color: #414763;
+        background-color: var(--darkblue-light-theme);
     }
 }
 

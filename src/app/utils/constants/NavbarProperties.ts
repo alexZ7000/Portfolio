@@ -1,24 +1,20 @@
-import INavbar from "@interfaces/INavbar.ts"
+import INavbar from "@interfaces/INavbar.ts";
 
 export const navbarProperties: INavbar[] = [
     {
         id: 1,
-        title: "Home",
-        navigate: "/portfolio/"
+        title: "Home"
     },
     {
         id: 2,
-        title: "Projects",
-        navigate: "/portfolio/projects/"
+        title: "Work Experience"
     },
     {
         id: 3,
-        title: "About",
-        navigate: "/portfolio/about/"
+        title: "About Me"
     },
     {
         id: 4,
-        title: "Contact",
-        navigate: "/portfolio/contact/"
+        title: "Contact"
     }
 ];

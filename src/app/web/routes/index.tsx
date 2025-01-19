@@ -7,7 +7,7 @@ export default function AppRoutes() {
     return (
         <BrowserRouter>
             <Navbar />
-            <div className={"pt-24"} />
+            <div className={"pt-32"} />
             <div className={"px-96"}>
                 <Routes>
                     <Route path={"/portfolio/*"} element={<ErrorPage />} />
