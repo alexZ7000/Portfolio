@@ -15,7 +15,7 @@ export default function Contact() {
                     alt={"alexZ7000 github profile photo"}
                 />
                 <div className={"flex flex-col justify-center items-center"}>
-                    <h1 className={"text-4xl font-bold"}>alexZ7000</h1>
+                    <h1 className={"text-4xl font-bold"}>Alessandro Lima</h1>
                     <h2 className={"text-2xl"}>Software Developer</h2>
                     <div className={"flex gap-4"}>
                         <a

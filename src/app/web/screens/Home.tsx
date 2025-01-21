@@ -1,5 +1,6 @@
 import DragonAnimation from "@components/Generic/DragonAnimation.tsx";
 import Contact from "@components/Generic/Contact.tsx";
+import "@styles/gradient.css";
 
 export default function Home() {
     return (
@@ -7,8 +8,14 @@ export default function Home() {
             <div className={"absolute -z-10 left-32"}>
                 <DragonAnimation />
             </div>
-            <section className={"flex justify-center items-center"}>
-                <h1>Welcome</h1>
+            <section className={"flex ms-96 pt-16"}>
+                <h1
+                    className={
+                        "text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 background-animate bg-[length:200%_100%]"
+                    }
+                >
+                    Unleashing powerful solutions with precision and mastery.
+                </h1>
             </section>
             <section className={"flex justify-center items-center"}>
                 <h1>Work Experience</h1>
