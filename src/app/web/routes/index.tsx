@@ -1,7 +1,7 @@
 import ErrorPage from "@screens/ErrorPage.tsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "@screens/Home.tsx";
-import Navbar from "@components/Generic/Navbar.tsx";
+import Navbar from "@components/Navbar.tsx";
 
 export default function AppRoutes() {
     return (

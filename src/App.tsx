@@ -1,5 +1,5 @@
 import AppRoutes from "@routes/index";
-import ToasterContainer from "@components/Generic/ToasterContainer.tsx";
+import ToasterContainer from "@components/ToasterContainer.tsx";
 import { createPortal } from "react-dom";
 import { useThemeDetector } from "@functions/ThemeDetector.ts";
 
